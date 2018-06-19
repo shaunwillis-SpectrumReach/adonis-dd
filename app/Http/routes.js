@@ -17,4 +17,5 @@
 
 const Route = use('Route');
 
-Route.resource('/api/locations', 'LocationController');
+Route.resource('/api/dbd-eventinfos', 'DbdEventinfoController')
+    .only(['index']);
