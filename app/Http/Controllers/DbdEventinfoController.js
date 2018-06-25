@@ -57,12 +57,12 @@ class DbdEventinfoController {
   //   response.jsonApi('DbdEventinfo', organization);
   // }
   //
-  // * show(request, response) {
-  //   const id = request.param('id');
-  //   const organization = yield DbdEventinfo.with('user', 'categories').where({ id }).firstOrFail();
-  //
-  //   response.jsonApi('DbdEventinfo', organization);
-  // }
+  * show(request, response) {
+    const id = request.param('id');
+    const data = yield DbdEventinfo.query().where({ id }).firstOrFail();
+
+    response.jsonApi('DbdEventinfo', data);
+  }
   //
   // * update(request, response) {
   //   const id = request.param('id');

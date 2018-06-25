@@ -18,4 +18,4 @@
 const Route = use('Route');
 
 Route.resource('/api/dbd-eventinfos', 'DbdEventinfoController')
-    .only(['index']);
+    .only(['index', 'show']);
