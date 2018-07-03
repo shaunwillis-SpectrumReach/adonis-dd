@@ -38,9 +38,9 @@ class DbdEventinfoController {
 
   * index(request, response) {
     const data = yield DbdEventinfo.query().fetch();
-
     response.jsonApi('DbdEventinfo', data);
   }
+
   //
   // * store(request, response) {
   //   const input = request.jsonApi.getAttributesSnakeCase(attributes);
