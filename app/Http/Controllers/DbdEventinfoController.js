@@ -1,5 +1,6 @@
 'use strict';
 
+var moment = require('moment');
 const DbdEventinfo = use('App/Model/DbdEventinfo');
 const attributes = [
     'eventname',
@@ -37,8 +38,30 @@ const options = {
 class DbdEventinfoController {
 
   * index(request, response) {
-    const data = yield DbdEventinfo.query().fetch();
-    response.jsonApi('DbdEventinfo', data);
+  try {
+    if (request.input('currentdate')) {
+        const now = moment().format();
+        const currentdate = yield DbdEventinfo.query().where('locdateadded', '>=', now).orderBy('locdateadded', 'asc').limit(1).fetch();
+        response.jsonApi('DbdEventinfo', currentdate);
+      }
+      else if (request.input('previousdate')) {
+        const now = moment().format();
+        const currentdate = yield DbdEventinfo.query().where('locdateadded', '<', now).orderBy('locdateadded', 'asc').fetch();
+        response.jsonApi('DbdEventinfo', currentdate);
+      }
+      else if (request.input('futuredate')) {
+        const now = moment().format();
+        // console.log(now);
+      const currentdate = yield DbdEventinfo.query().where('locdateadded', '>', now).orderBy('locdateadded', 'asc').offset(1).fetch();
+        response.jsonApi('DbdEventinfo', currentdate);
+      }
+      else {
+        const data = yield DbdEventinfo.query().fetch();
+        response.jsonApi('DbdEventinfo', data);
+      }
+      } catch (error) {
+        console.log(error);
+      }
   }
 
   //
