@@ -19,7 +19,7 @@ const attributes = [
     'icscalendar',
     'clientcontact',
     'pardotform',
-    'schedule_of_events'
+    'scheduleofevents'
   ];
 
 // const NodeGeocoder = require('node-geocoder');
