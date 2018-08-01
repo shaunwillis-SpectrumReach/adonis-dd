@@ -19,6 +19,7 @@ const attributes = [
     'icscalendar',
     'clientcontact',
     'pardotform',
+    'eventpics',
     'scheduleofevents'
   ];
 
