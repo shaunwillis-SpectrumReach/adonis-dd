@@ -20,6 +20,7 @@ const attributes = [
     'clientcontact',
     'pardotform',
     'eventpics',
+    'mapembed',
     'scheduleofevents'
   ];
 

@@ -20,6 +20,7 @@ class DbdEventinfo extends JsonApiView {
       'clientcontact',
       'pardotform',
       'eventpics',
+      'mapembed',
       'scheduleofevents'
     ];
   }
