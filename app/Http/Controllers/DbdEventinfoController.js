@@ -18,7 +18,8 @@ const attributes = [
     'livestreamed',
     'icscalendar',
     'clientcontact',
-    'pardotform'
+    'pardotform',
+    'schedule_of_events'
   ];
 
 // const NodeGeocoder = require('node-geocoder');
