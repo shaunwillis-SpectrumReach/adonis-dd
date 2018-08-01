@@ -18,6 +18,8 @@ class DbdEventinfo extends JsonApiView {
       'livestreamed',
       'icscalendar',
       'clientcontact',
+      'clientcontactemail',
+      'clientcontactphonenumber',
       'pardotform',
       'eventpics',
       'mapembed',

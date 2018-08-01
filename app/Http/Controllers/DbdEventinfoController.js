@@ -18,6 +18,8 @@ const attributes = [
     'livestreamed',
     'icscalendar',
     'clientcontact',
+    'clientcontactemail',
+    'clientcontactphonenumber',
     'pardotform',
     'eventpics',
     'mapembed',
