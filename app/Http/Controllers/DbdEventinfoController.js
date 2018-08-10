@@ -8,6 +8,8 @@ const attributes = [
     'locationaddress',
     'locationaddress2',
     'locationcity',
+    'locationgeneral',
+    'generaldate',
     'locationstate',
     'locationzip',
     'locdateadded',

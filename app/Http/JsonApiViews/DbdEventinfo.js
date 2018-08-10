@@ -13,6 +13,8 @@ class DbdEventinfo extends JsonApiView {
       'locdateadded',
       'locationlat',
       'locationlong',
+      'locationgeneral',
+      'generaldate',
       'eventdesc',
       'eventtime',
       'livestreamed',
