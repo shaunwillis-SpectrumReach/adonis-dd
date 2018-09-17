@@ -47,7 +47,8 @@ class DbdEventinfoController {
   * index(request, response) {
   try {
     if (request.input('currentdate')) {
-        const now = moment().format();
+      const now = moment('2016-04-22T16:00:00.000Z', 'YYYY-MM-DDTHH:mm:ss.SSS').format();
+        // const now = moment().format();
         const currentdate = yield DbdEventinfo.query().where('locdateadded', '>=', now).orderBy('locdateadded', 'asc').limit(1).fetch();
         response.jsonApi('DbdEventinfo', currentdate);
       }
