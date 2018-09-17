@@ -53,13 +53,24 @@ module.exports = {
   | npm i --save mysql
   |
   */
+//  LIVE DB
+  // mysql: {
+  //   client: 'mysql',
+  //   connection: {
+  //     host: Env.get('DB_HOST', 'localhost'),
+  //     user: Env.get('DB_USER', 'root'),
+  //     password: Env.get('DB_PASSWORD', ''),
+  //     database: Env.get('DB_DATABASE', 'adonis'),
+  //   },
+  // },
+  // STAGING DB
   mysql: {
     client: 'mysql',
     connection: {
-      host: Env.get('DB_HOST', 'localhost'),
-      user: Env.get('DB_USER', 'root'),
-      password: Env.get('DB_PASSWORD', ''),
-      database: Env.get('DB_DATABASE', 'adonis'),
+      host: Env.get('STAGING_DB_HOST', 'localhost'),
+      user: Env.get('STAGING_DB_USER', 'root'),
+      password: Env.get('STAGING_DB_PASSWORD', ''),
+      database: Env.get('STAGING_DB_DATABASE', 'adonis'),
     },
   },
 
